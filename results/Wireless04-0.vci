@@ -1,0 +1,140 @@
+file 5638 1488860145                                            
+version 2
+run Wireless04-0-20170307-12:15:43-18076
+attr configname Wireless04
+attr datetime 20170307-12:15:43
+attr experiment Wireless04
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network WirelessB
+attr processid 18076
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.configurator.config "xml(\"<config><interface hosts='**' address='10.0.0.x' netmask='255.255.255.0'/><autoroute metric='errorRate'/></config>\")"
+param *.configurator.optimizeRoutes false
+param *.host*.**.bitrate 1Mbps
+param *.host*.forwarding true
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.routingTable.netmaskRoutes "\"\""
+param *.host*.wlan[*].radio.transmitter.communicationRange 250m
+param *.host*.wlan[0].radio.transmitter.communicationRange 500m
+param *.host*.wlan[0].typename "\"IdealWirelessNic\""
+param *.hostA.numUdpApps 1
+param *.hostA.udpApp[0].destAddresses "\"hostB\""
+param *.hostA.udpApp[0].destPort 5000
+param *.hostA.udpApp[0].messageLength 1000B
+param *.hostA.udpApp[0].packetName "\"UDPData\""
+param *.hostA.udpApp[0].sendInterval exponential(12ms)
+param *.hostA.udpApp[0].typename "\"UDPBasicApp\""
+param *.hostA.wlan[0].radio.displayCommunicationRange true
+param *.hostB.numUdpApps 1
+param *.hostB.udpApp[0].localPort 5000
+param *.hostB.udpApp[0].typename "\"UDPSink\""
+param *.hostR1.wlan[0].radio.displayCommunicationRange true
+param *.visualizer.dataLinkVisualizer.packetNameFilter "\"UDPData\""
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.mediumVisualizer.signalPropagationUpdateInterval 100ns
+param *.visualizer.networkRouteVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.physicalLinkVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+
+vector 15  WirelessB.hostA.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 38  WirelessB.hostB.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 53  WirelessB.hostR1.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 68  WirelessB.hostR2.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 83  WirelessB.hostR3.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 21  WirelessB.hostA.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 44  WirelessB.hostB.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 59  WirelessB.hostR1.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 74  WirelessB.hostR2.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 89  WirelessB.hostR3.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 22  WirelessB.hostA.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 23  WirelessB.hostA.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 45  WirelessB.hostB.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 46  WirelessB.hostB.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 60  WirelessB.hostR1.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 61  WirelessB.hostR1.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 75  WirelessB.hostR2.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 76  WirelessB.hostR2.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 90  WirelessB.hostR3.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 91  WirelessB.hostR3.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+15	5388 10 0 0 0 0 1 0 0 0 0
+21	5398 20 0 0 0 0 2 0 4 4 16
+22	5418 10 0 0 0 0 1 1 1 1 1
+23	5428 10 0 0 0 0 1 1 1 1 1
+38	5438 10 0 0 0 0 1 0 0 0 0
+44	5448 20 0 0 0 0 2 0 4 4 16
+45	5468 10 0 0 0 0 1 1 1 1 1
+46	5478 10 0 0 0 0 1 1 1 1 1
+53	5488 10 0 0 0 0 1 0 0 0 0
+59	5498 20 0 0 0 0 2 0 4 4 16
+60	5518 10 0 0 0 0 1 1 1 1 1
+61	5528 10 0 0 0 0 1 1 1 1 1
+68	5538 10 0 0 0 0 1 0 0 0 0
+74	5548 20 0 0 0 0 2 0 4 4 16
+75	5568 10 0 0 0 0 1 1 1 1 1
+76	5578 10 0 0 0 0 1 1 1 1 1
+83	5588 10 0 0 0 0 1 0 0 0 0
+89	5598 20 0 0 0 0 2 0 4 4 16
+90	5618 10 0 0 0 0 1 1 1 1 1
+91	5628 10 0 0 0 0 1 1 1 1 1

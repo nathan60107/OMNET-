@@ -1,0 +1,109 @@
+file 76874 1491601820                                           
+version 2
+run Wireless07-0-20170408-05:50:00-6376
+attr configname Wireless07
+attr datetime 20170408-05:50:00
+attr experiment Wireless07
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network WirelessB
+attr processid 6376
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.configurator.config "xml(\"<config><interface hosts='**' address='10.0.0.x' netmask='255.255.255.0'/><autoroute metric='errorRate'/></config>\")"
+param *.configurator.optimizeRoutes false
+param *.host*.**.bitrate 1Mbps
+param *.host*.forwarding true
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.routingTable.netmaskRoutes "\"\""
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].macType "\"CsmaCaMac\""
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.wlan[0].radio.transmitter.communicationRange 10m
+param *.host*.wlan[0].radio.transmitter.interferenceRange 10m
+param *.host*.wlan[0].radioType "\"IdealRadio\""
+param *.host*.wlan[0].typename "\"IdealWirelessNic\""
+param *.hostA.numUdpApps 1
+param *.hostA.udpApp[0].destAddresses "\"hostB\""
+param *.hostA.udpApp[0].destPort 5000
+param *.hostA.udpApp[0].messageLength 1000B
+param *.hostA.udpApp[0].packetName "\"UDPData\""
+param *.hostA.udpApp[0].sendInterval exponential(12ms)
+param *.hostA.udpApp[0].typename "\"UDPBasicApp\""
+param *.hostA.wlan[0].radio.displayInterferenceRange true
+param *.hostB.numUdpApps 1
+param *.hostB.udpApp[0].localPort 5000
+param *.hostB.udpApp[0].typename "\"UDPSink\""
+param *.visualizer.dataLinkVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.mediumVisualizer.signalPropagationUpdateInterval 100ns
+param *.visualizer.networkRouteVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.physicalLinkVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+
+vector 12  WirelessB.hostA.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 26  WirelessB.hostB.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 32  WirelessB.hostR1.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 38  WirelessB.hostR2.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 44  WirelessB.hostR3.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 13  WirelessB.hostA.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 27  WirelessB.hostB.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 33  WirelessB.hostR1.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 39  WirelessB.hostR2.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 45  WirelessB.hostR3.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 1  WirelessB.hostA.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 4  WirelessB.hostA.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+1	4208 36258 16 3902 0.022315250545 15.838217013742 1296 1000 1000 1296000 1296000000
+4	40466 36258 18 3903 0.022315250545 15.838217013742 1296 1008 1008 1306368 1316818944
+12	76724 20 0 0 0 0 2 0 2 2 4
+13	76744 10 0 0 0 0 1 1 1 1 1
+26	76754 20 0 0 0 0 2 0 2 2 4
+27	76774 10 0 0 0 0 1 1 1 1 1
+32	76784 20 0 0 0 0 2 0 2 2 4
+33	76804 10 0 0 0 0 1 1 1 1 1
+38	76814 20 0 0 0 0 2 0 2 2 4
+39	76834 10 0 0 0 0 1 1 1 1 1
+44	76844 20 0 0 0 0 2 0 2 2 4
+45	76864 10 0 0 0 0 1 1 1 1 1

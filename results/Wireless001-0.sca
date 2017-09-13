@@ -1,0 +1,801 @@
+version 2
+run Wireless001-0-20170305-23:34:27-10916
+attr configname Wireless001
+attr datetime 20170305-23:34:27
+attr experiment Wireless001
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network recording
+attr processid 10916
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host*.**.bitrate 1Mbps
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.numUdpApps 1
+param *.host*.wlan[0].radio.transmitter.communicationRange 500m
+param *.host*.wlan[0].typename "\"IdealWirelessNic\""
+param *.hostA.udpApp[0].destAddresses "\"hostB\""
+param *.hostA.udpApp[0].destPort 5000
+param *.hostA.udpApp[0].messageLength 1000B
+param *.hostA.udpApp[0].packetName "\"MIKU\""
+param *.hostA.udpApp[0].sendInterval exponential(12ms)
+param *.hostA.udpApp[0].typename "\"UDPBasicApp\""
+param *.hostB.udpApp[0].localPort 5000
+param *.hostB.udpApp[0].typename "\"UDPSink\""
+
+scalar recording.hostA.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar recording.hostA.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar recording.hostA.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar recording.hostA.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar recording.hostA.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar recording.hostA.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar recording.hostA.wlan[0].queue 	queueLength:max 	9
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar recording.hostA.wlan[0].queue 	queueLength:timeavg 	0.7811587126728
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic recording.hostA.wlan[0].queue 	queueingTime:histogram
+field count 2018
+field mean 0.0096389022994698
+field stddev 0.011921237111133
+field sum 19.45130484033
+field sqrsum 0.47413698567528
+field min 0
+field max 0.067077873618
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.023688749283	0
+bin	-0.0205302493786	0
+bin	-0.0173717494742	0
+bin	-0.0142132495698	0
+bin	-0.0110547496654	0
+bin	-0.007896249761	0
+bin	-0.0047377498566	0
+bin	-0.0015792499522	710
+bin	0.0015792499522	227
+bin	0.0047377498566	264
+bin	0.007896249761	161
+bin	0.0110547496654	129
+bin	0.0142132495698	107
+bin	0.0173717494742	106
+bin	0.0205302493786	74
+bin	0.023688749283	64
+bin	0.0268472491874	24
+bin	0.0300057490918	41
+bin	0.0331642489962	19
+bin	0.0363227489006	22
+bin	0.039481248805	11
+bin	0.0426397487094	22
+bin	0.0457982486138	10
+bin	0.0489567485182	8
+bin	0.0521152484226	3
+bin	0.055273748327	9
+bin	0.0584322482314	3
+bin	0.0615907481358	3
+bin	0.0647492480402	1
+bin	0.0679077479446	0
+bin	0.071066247849	0
+scalar recording.hostA.wlan[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar recording.hostA.wlan[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar recording.hostA.wlan[0].queue 	rcvdPk:count 	2021
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar recording.hostA.wlan[0].queue 	rcvdPk:sum(packetBytes) 	2077588
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar recording.hostA.wlan[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar recording.hostA.wlan[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar recording.hostA.wlan[0].mac 	rcvdPkFromHL:count 	2018
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar recording.hostA.wlan[0].mac 	rcvdPkFromHL:sum(packetBytes) 	2074504
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar recording.hostA.wlan[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar recording.hostA.wlan[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar recording.hostA.wlan[0].mac 	rcvdPkFromLL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar recording.hostA.wlan[0].mac 	rcvdPkFromLL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar recording.hostA.wlan[0].mac 	sentDownPk:count 	2018
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar recording.hostA.wlan[0].mac 	sentDownPk:sum(packetBytes) 	2074504
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+statistic recording.hostA.wlan[0].radio 	symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic recording.hostA.wlan[0].radio 	bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic recording.hostA.wlan[0].radio 	packetErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic recording.hostA.wlan[0].radio 	minSNIR:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar recording.hostA.wlan[0].radio 	transmissionState:count 	4036
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar recording.hostA.wlan[0].radio 	receptionState:count 	1
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar recording.hostA.wlan[0].radio 	radioMode:count 	2
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar recording.hostA.udpApp[0] 	"packets sent" 	2021
+scalar recording.hostA.udpApp[0] 	"packets received" 	0
+scalar recording.hostA.udpApp[0] 	sentPk:count 	2021
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar recording.hostA.udpApp[0] 	sentPk:sum(packetBytes) 	2021000
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar recording.hostA.udpApp[0] 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar recording.hostA.udpApp[0] 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar recording.hostA.udpApp[0] 	throughput:last 	nan
+attr source  throughput(rcvdPk)
+attr title  "throughput, last"
+attr unit  bps
+statistic recording.hostA.udpApp[0] 	rcvdPkLifetime:stats
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "received packet lifetime, stats"
+attr unit  s
+scalar recording.hostA.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar recording.hostA.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar recording.hostA.udp 	passedUpPk:count 	0
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar recording.hostA.udp 	sentPk:count 	2021
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar recording.hostA.udp 	sentPk:sum(packetBytes) 	2037168
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar recording.hostA.udp 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar recording.hostA.udp 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar recording.hostB.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar recording.hostB.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar recording.hostB.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar recording.hostB.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar recording.hostB.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar recording.hostB.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar recording.hostB.wlan[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar recording.hostB.wlan[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic recording.hostB.wlan[0].queue 	queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar recording.hostB.wlan[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar recording.hostB.wlan[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar recording.hostB.wlan[0].queue 	rcvdPk:count 	0
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar recording.hostB.wlan[0].queue 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar recording.hostB.wlan[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar recording.hostB.wlan[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar recording.hostB.wlan[0].mac 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar recording.hostB.wlan[0].mac 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar recording.hostB.wlan[0].mac 	passedUpPk:count 	2017
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar recording.hostB.wlan[0].mac 	passedUpPk:sum(packetBytes) 	2073476
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar recording.hostB.wlan[0].mac 	rcvdPkFromLL:count 	2017
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar recording.hostB.wlan[0].mac 	rcvdPkFromLL:sum(packetBytes) 	2073476
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar recording.hostB.wlan[0].mac 	sentDownPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar recording.hostB.wlan[0].mac 	sentDownPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+statistic recording.hostB.wlan[0].radio 	symbolErrorRate:histogram
+field count 2017
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	2017
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic recording.hostB.wlan[0].radio 	bitErrorRate:histogram
+field count 2017
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	2017
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic recording.hostB.wlan[0].radio 	packetErrorRate:histogram
+field count 2017
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	2017
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic recording.hostB.wlan[0].radio 	minSNIR:histogram
+field count 2017
+field mean nan
+field stddev nan
+field sum nan
+field sqrsum nan
+field min nan
+field max nan
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	2017
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+scalar recording.hostB.wlan[0].radio 	transmissionState:count 	1
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar recording.hostB.wlan[0].radio 	receptionState:count 	4036
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar recording.hostB.wlan[0].radio 	radioMode:count 	2
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar recording.hostB.udpApp[0] 	rcvdPk:count 	2017
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar recording.hostB.udpApp[0] 	rcvdPk:sum(packetBytes) 	2017000
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar recording.hostB.udpApp[0] 	throughput:last 	972604.85118454
+attr source  throughput(rcvdPk)
+attr title  "throughput, last"
+attr unit  bps
+statistic recording.hostB.udpApp[0] 	endToEndDelay:histogram
+field count 2017
+field mean 0.017853140750184
+field stddev 0.011913765782574
+field sum 36.009784893122
+field sqrsum 0.92903439336677
+field min 0.008225334256
+field max 0.075303207874
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.015463415027	0
+bin	-0.0123049151226	0
+bin	-0.0091464152182	0
+bin	-0.0059879153138	0
+bin	-0.0028294154094	0
+bin	0.000329084495	0
+bin	0.0034875843994	0
+bin	0.0066460843038	710
+bin	0.0098045842082	227
+bin	0.0129630841126	264
+bin	0.016121584017	161
+bin	0.0192800839214	129
+bin	0.0224385838258	107
+bin	0.0255970837302	106
+bin	0.0287555836346	74
+bin	0.031914083539	64
+bin	0.0350725834434	24
+bin	0.0382310833478	40
+bin	0.0413895832522	19
+bin	0.0445480831566	22
+bin	0.047706583061	11
+bin	0.0508650829654	22
+bin	0.0540235828698	10
+bin	0.0571820827742	8
+bin	0.0603405826786	3
+bin	0.063499082583	9
+bin	0.0666575824874	3
+bin	0.0698160823918	3
+bin	0.0729745822962	1
+bin	0.0761330822006	0
+bin	0.079291582105	0
+scalar recording.hostB.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar recording.hostB.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar recording.hostB.udp 	passedUpPk:count 	2017
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar recording.hostB.udp 	sentPk:count 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar recording.hostB.udp 	sentPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar recording.hostB.udp 	rcvdPk:count 	2017
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar recording.hostB.udp 	rcvdPk:sum(packetBytes) 	2033136
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar recording.radioMedium.propagation 	"Arrival computation count" 	2018
+scalar recording.radioMedium 	"transmission count" 	2018
+scalar recording.radioMedium 	"radio frame send count" 	2018
+scalar recording.radioMedium 	"reception computation count" 	2018
+scalar recording.radioMedium 	"interference computation count" 	10089
+scalar recording.radioMedium 	"reception decision computation count" 	2017
+scalar recording.radioMedium 	"listening decision computation count" 	6054
+scalar recording.radioMedium 	"reception cache hit" 	85.710239342869
+attr unit  %
+scalar recording.radioMedium 	"interference cache hit" 	66.666666666667
+attr unit  %
+scalar recording.radioMedium 	"noise cache hit" 	0
+attr unit  %
+scalar recording.radioMedium 	"snir cache hit" 	50
+attr unit  %
+scalar recording.radioMedium 	"reception decision cache hit" 	50
+attr unit  %
+scalar recording.radioMedium 	"reception result cache hit" 	0
+attr unit  %

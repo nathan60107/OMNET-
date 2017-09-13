@@ -1,0 +1,161 @@
+file 28956 1491602030                                           
+version 2
+run Wireless10-0-20170408-05:53:32-6876
+attr configname Wireless10
+attr datetime 20170408-05:53:32
+attr experiment Wireless10
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network WirelessB
+attr processid 6876
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.configurator.addStaticRoutes false
+param *.configurator.config "xml(\"<config><interface hosts='**' address='10.0.0.x' netmask='255.255.255.0'/><autoroute metric='errorRate'/></config>\")"
+param *.configurator.optimizeRoutes false
+param *.host*.**.bitrate 1Mbps
+param *.host*.energyStorageType "\"IdealEnergyStorage\""
+param *.host*.forwarding true
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.routingTable.netmaskRoutes "\"\""
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].mac.maxQueueSize 10
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].macType "\"CsmaCaMac\""
+param *.host*.wlan[0].radio.energyConsumer transmitterIdlePowerConsumption 2mW
+param *.host*.wlan[0].radio.energyConsumer.offPowerConsumption 0mW
+param *.host*.wlan[0].radio.energyConsumer.receiverBusyPowerConsumption 5mW
+param *.host*.wlan[0].radio.energyConsumer.receiverIdlePowerConsumption 2mW
+param *.host*.wlan[0].radio.energyConsumer.receiverReceivingPowerConsumption 10mW
+param *.host*.wlan[0].radio.energyConsumer.sleepPowerConsumption 1mW
+param *.host*.wlan[0].radio.energyConsumer.switchingPowerConsumption 1mW
+param *.host*.wlan[0].radio.energyConsumer.transmitterTransmittingPowerConsumption 100mW
+param *.host*.wlan[0].radio.energyConsumerType "\"StateBasedEnergyConsumer\""
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.wlan[0].radio.transmitter.communicationRange 10m
+param *.host*.wlan[0].radio.transmitter.interferenceRange 10m
+param *.host*.wlan[0].radioType "\"IdealRadio\""
+param *.host*.wlan[0].typename "\"IdealWirelessNic\""
+param *.hostA.numUdpApps 1
+param *.hostA.udpApp[0].destAddresses "\"hostB\""
+param *.hostA.udpApp[0].destPort 5000
+param *.hostA.udpApp[0].messageLength 1000B
+param *.hostA.udpApp[0].packetName "\"UDPData\""
+param *.hostA.udpApp[0].sendInterval exponential(12ms)
+param *.hostA.udpApp[0].typename "\"UDPBasicApp\""
+param *.hostA.wlan[0].radio.displayInterferenceRange true
+param *.hostB.numUdpApps 1
+param *.hostB.udpApp[0].localPort 5000
+param *.hostB.udpApp[0].typename "\"UDPSink\""
+param *.hostR*.mobility.angle 270deg
+param *.hostR*.mobility.speed 12mps
+param *.hostR*.mobilityType "\"LinearMobility\""
+param *.hostType "\"AODVRouter\""
+param *.visualizer.dataLinkVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.mediumVisualizer.signalPropagationUpdateInterval 100ns
+param *.visualizer.mobilityVisualizer.displayMovementTrail true
+param *.visualizer.networkRouteVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.physicalLinkVisualizer.packetNameFilter "\"UDPData*\""
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+
+vector 0  WirelessB.hostA.energyStorage  powerConsumption:vector  ETV
+attr interpolationmode  sample-hold
+attr source  powerConsumptionChanged
+attr title  "Power consumption, vector"
+vector 19  WirelessB.hostB.energyStorage  powerConsumption:vector  ETV
+attr interpolationmode  sample-hold
+attr source  powerConsumptionChanged
+attr title  "Power consumption, vector"
+vector 37  WirelessB.hostR1.energyStorage  powerConsumption:vector  ETV
+attr interpolationmode  sample-hold
+attr source  powerConsumptionChanged
+attr title  "Power consumption, vector"
+vector 47  WirelessB.hostR2.energyStorage  powerConsumption:vector  ETV
+attr interpolationmode  sample-hold
+attr source  powerConsumptionChanged
+attr title  "Power consumption, vector"
+vector 57  WirelessB.hostR3.energyStorage  powerConsumption:vector  ETV
+attr interpolationmode  sample-hold
+attr source  powerConsumptionChanged
+attr title  "Power consumption, vector"
+vector 15  WirelessB.hostA.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 33  WirelessB.hostB.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 43  WirelessB.hostR1.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 53  WirelessB.hostR2.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 63  WirelessB.hostR3.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 16  WirelessB.hostA.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 34  WirelessB.hostB.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 44  WirelessB.hostR1.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 54  WirelessB.hostR2.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 64  WirelessB.hostR3.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 4  WirelessB.hostA.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 7  WirelessB.hostA.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 2  WirelessB.hostA.energyStorage  residualCapacity:vector  ETV
+attr interpolationmode  linear
+attr source  residualCapacityChanged
+attr title  "Residual capacity, vector"
+vector 17  WirelessB.hostA.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+0	6597 9 0 0 0 0 1 0 0 0 0
+2	6606 410 28 1330 0.024302458152 4.427209143776 10 -0.009089618287552 -4.8604916304e-005 -0.029534423929804 0.00019099888098297
+4	7016 10389 21 1408 0.022315250545 4.747173584558 383 1000 1000 383000 383000000
+7	17405 10361 23 1406 0.022315250545 4.742773122712 382 1008 1008 385056 388136448
+15	27766 270 0 1330 0 4.427209143776 12 0 3 27 69
+16	28036 260 0 1330 0 4.427209143776 11 0 1 6 6
+17	28296 500 28 1330 0.024302458152 4.427209143776 20 0 2 20 30
+19	28796 10 0 0 0 0 1 0 0 0 0
+33	28806 20 0 0 0 0 2 0 2 2 4
+34	28826 10 0 0 0 0 1 1 1 1 1
+37	28836 10 0 0 0 0 1 0 0 0 0
+43	28846 20 0 0 0 0 2 0 2 2 4
+44	28866 10 0 0 0 0 1 1 1 1 1
+47	28876 10 0 0 0 0 1 0 0 0 0
+53	28886 20 0 0 0 0 2 0 2 2 4
+54	28906 10 0 0 0 0 1 1 1 1 1
+57	28916 10 0 0 0 0 1 0 0 0 0
+63	28926 20 0 0 0 0 2 0 2 2 4
+64	28946 10 0 0 0 0 1 1 1 1 1

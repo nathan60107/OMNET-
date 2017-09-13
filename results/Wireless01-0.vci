@@ -1,0 +1,95 @@
+file 146806 1495267581                                          
+version 2
+run Wireless01-0-20170520-16:05:41-2676
+attr configname Wireless01
+attr datetime 20170520-16:05:41
+attr experiment Wireless01
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network WirelessA
+attr processid 2676
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host*.**.bitrate 1Mbps
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.wlan[0].typename "\"IdealWirelessNic\""
+param *.hostA.numUdpApps 1
+param *.hostA.udpApp[0].destAddresses "\"hostB\""
+param *.hostA.udpApp[0].destPort 5000
+param *.hostA.udpApp[0].messageLength 1000B
+param *.hostA.udpApp[0].packetName "\"UDPData\""
+param *.hostA.udpApp[0].sendInterval exponential(12ms)
+param *.hostA.udpApp[0].typename "\"UDPBasicApp\""
+param *.hostB.numUdpApps 1
+param *.hostB.udpApp[0].localPort 5000
+param *.hostB.udpApp[0].typename "\"UDPSink\""
+
+vector 15  WirelessA.hostA.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 38  WirelessA.hostB.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 21  WirelessA.hostA.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 44  WirelessA.hostB.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 22  WirelessA.hostA.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 45  WirelessA.hostB.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 1  WirelessA.hostA.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 4  WirelessA.hostA.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 12  WirelessA.hostA.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 14  WirelessA.hostA.wlan[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 18  WirelessA.hostA.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 23  WirelessA.hostA.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 17  WirelessA.hostA.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+1	3348 9543 10 3427 0.022315250545 4.021544198947 346 1000 1000 346000 346000000
+4	12891 9543 12 3428 0.022315250545 4.021544198947 346 1008 1008 348768 351558144
+12	22434 9889 14 3430 0.022315250545 4.021544198947 346 1028 1028 355688 365647264
+14	32323 11947 14 3437 0.022315250545 4.032817245473 342 0 0.049524252612 4.49592176309 0.12732332973044
+15	44270 12724 0 3437 0 4.032817245473 497 0 7 1144 4156
+17	56994 9805 15 3438 0.022315250545 4.032817245473 342 1028 1028 351576 361420128
+18	66799 9805 15 3438 0.022315250545 4.032817245473 342 1028 1028 351576 361420128
+21	76604 17553 0 3438 0 4.032817245473 685 0 3 1710 4446
+22	94157 17543 0 3438 0 4.032817245473 684 0 1 342 342
+23	111700 35066 15 3439 0.022315250545 4.032817245473 1366 0 2 1367 2051
+38	146766 10 0 0 0 0 1 0 0 0 0
+44	146776 20 0 0 0 0 2 0 2 2 4
+45	146796 10 0 0 0 0 1 1 1 1 1

@@ -1,0 +1,3 @@
+package recording;
+
+@license(LGPL);
