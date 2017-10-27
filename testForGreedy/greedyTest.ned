@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package recording.greedy1;
+package recording.testForGreedy;
 
 import inet.common.figures.DelegateSignalConfigurator;
 import inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator;
@@ -26,7 +26,7 @@ import inet.visualizer.integrated.IntegratedCanvasVisualizer;
 //
 // TODO auto-generated type
 //
-network GreedyTest
+network GreedyBasicTest
 {
     parameters:
         int n_hosts;
@@ -48,17 +48,17 @@ network GreedyTest
         host1: GREEDYRouter {//greedyRouterHost[n_hosts]
             @display("p=244,123");
         }
-        //host2: GREEDYRouter {//greedyRouterHost[n_hosts]
-        //    @display("p=466.704,41.328003");
-        //}
-        //host3: GREEDYRouter {//greedyRouterHost[n_hosts]
-        //    @display("p=486.864,232.848");
-        //}
+        host2: GREEDYRouter {//greedyRouterHost[n_hosts]
+            @display("p=373.96802,61.488003");
+        }
+        host3: GREEDYRouter {//greedyRouterHost[n_hosts]
+            @display("p=450.57602,232.848");
+        }
         //host4: GREEDYRouter {//greedyRouterHost[n_hosts]
-        //    @display("p=440,255");
+        //    @display("p=463.68002,201.6");
         //}
         host5: GREEDYRouter {//greedyRouterHost[n_hosts]
-            @display("p=359.85602,180.432");
+            @display("p=283.24802,332.64");
         }
         configurator: IPv4NetworkConfigurator {
             @display("p=55,123");

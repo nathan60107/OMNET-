@@ -1,15 +1,15 @@
-file 54292 1505306640                                           
+                                                                
 version 2
-run General-0-20170913-20:43:47-4268
+run General-0-20171027-17:42:17-6468
 attr configname General
-attr datetime 20170913-20:43:47
+attr datetime 20171027-17:42:17
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network recording.greedy1.GreedyTest
-attr processid 4268
+attr processid 6468
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -39,7 +39,7 @@ param *.host0.udpApp[0].sendInterval exponential(12ms)
 param *.host0.udpApp[0].typename "\"UDPBasicApp\""
 param *.host0.wlan[*].radio.transmitter.communicationRange 200m
 param *.host1.mobility.angle 0deg
-param *.host1.mobility.speed 12mps
+param *.host1.mobility.speed 1mps
 param *.host1.mobilityType "\"LinearMobility\""
 param *.host1.wlan[*].radio.transmitter.communicationRange 200m
 param *.host2.wlan[*].radio.transmitter.communicationRange 200m
@@ -53,111 +53,150 @@ param *.integratedCanvasVisualizer.mediumVisualizer.displaySignals true
 param *.integratedCanvasVisualizer.mobilityVisualizer.displayMovementTrail true
 param *.integratedCanvasVisualizer.physicalLinkVisualizer.packetNameFilter "\"UDPData*\""
 
-vector 15  GreedyTest.host0.wlan[0].queue  queueLength:vector  ETV
+vector 77  GreedyTest.host0.wlan[0].queue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 30  GreedyTest.host1.wlan[0].queue  queueLength:vector  ETV
+vector 92  GreedyTest.host1.wlan[0].queue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 53  GreedyTest.host5.wlan[0].queue  queueLength:vector  ETV
+vector 115  GreedyTest.host5.wlan[0].queue  queueLength:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "queue length, vector"
-vector 21  GreedyTest.host0.wlan[0].radio  radioMode:vector  ETV
+vector 83  GreedyTest.host0.wlan[0].radio  radioMode:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, vector"
-vector 36  GreedyTest.host1.wlan[0].radio  radioMode:vector  ETV
+vector 98  GreedyTest.host1.wlan[0].radio  radioMode:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, vector"
-vector 59  GreedyTest.host5.wlan[0].radio  radioMode:vector  ETV
+vector 121  GreedyTest.host5.wlan[0].radio  radioMode:vector  ETV
 attr interpolationmode  sample-hold
 attr source  radioModeChanged
 attr title  "Radio mode, vector"
-vector 22  GreedyTest.host0.wlan[0].radio  receptionState:vector  ETV
+vector 84  GreedyTest.host0.wlan[0].radio  receptionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, vector"
-vector 37  GreedyTest.host1.wlan[0].radio  receptionState:vector  ETV
+vector 99  GreedyTest.host1.wlan[0].radio  receptionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, vector"
-vector 60  GreedyTest.host5.wlan[0].radio  receptionState:vector  ETV
+vector 122  GreedyTest.host5.wlan[0].radio  receptionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  receptionStateChanged
 attr title  "Radio reception state, vector"
-vector 1  GreedyTest.host0.udpApp[0]  sentPk:vector(packetBytes)  ETV
+vector 63  GreedyTest.host0.udpApp[0]  sentPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  sentPk
 attr title  "packets sent, vector(packetBytes)"
-vector 4  GreedyTest.host0.udp  sentPk:vector(packetBytes)  ETV
+vector 66  GreedyTest.host0.udp  sentPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  sentPk
 attr title  "packets sent, vector(packetBytes)"
-vector 50  GreedyTest.host5.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
+vector 112  GreedyTest.host5.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr title  "received packets, vector(packetBytes)"
-vector 52  GreedyTest.host5.wlan[0].queue  queueingTime:vector  ETV
+vector 114  GreedyTest.host5.wlan[0].queue  queueingTime:vector  ETV
 attr interpolationmode  none
 attr title  "queueing time, vector"
-vector 56  GreedyTest.host5.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+vector 118  GreedyTest.host5.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, vector(packetBytes)"
-vector 61  GreedyTest.host5.wlan[0].radio  transmissionState:vector  ETV
+vector 123  GreedyTest.host5.wlan[0].radio  transmissionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  transmissionStateChanged
 attr title  "Radio transmission state, vector"
-vector 55  GreedyTest.host5.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+vector 117  GreedyTest.host5.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, vector(packetBytes)"
-vector 34  GreedyTest.host1.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+vector 96  GreedyTest.host1.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetReceivedFromLower
 attr title  "packets received from lower layer, vector(packetBytes)"
-vector 31  GreedyTest.host1.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+vector 93  GreedyTest.host1.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetSentToUpper
 attr title  "packets passed to higher layer, vector(packetBytes)"
-vector 12  GreedyTest.host0.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
+vector 74  GreedyTest.host0.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr title  "received packets, vector(packetBytes)"
-vector 14  GreedyTest.host0.wlan[0].queue  queueingTime:vector  ETV
+vector 76  GreedyTest.host0.wlan[0].queue  queueingTime:vector  ETV
 attr interpolationmode  none
 attr title  "queueing time, vector"
-vector 18  GreedyTest.host0.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+vector 75  GreedyTest.host0.wlan[0].queue  dropPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, vector(packetBytes)"
+vector 80  GreedyTest.host0.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetReceivedFromUpper
 attr title  "packets received from higher layer, vector(packetBytes)"
-vector 23  GreedyTest.host0.wlan[0].radio  transmissionState:vector  ETV
+vector 85  GreedyTest.host0.wlan[0].radio  transmissionState:vector  ETV
 attr interpolationmode  sample-hold
 attr source  transmissionStateChanged
 attr title  "Radio transmission state, vector"
-vector 17  GreedyTest.host0.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+vector 79  GreedyTest.host0.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
 attr interpolationmode  none
 attr source  packetSentToLower
 attr title  "packets sent to lower layer, vector(packetBytes)"
-1	6404 23502 15 2703 0.022315250545 10.215793996957 854 1000 1000 854000 854000000
-4	29906 23502 17 2704 0.022315250545 10.215793996957 854 1008 1008 860832 867718656
-12	53408 28 2678 2678 10.172951349057 10.172951349057 1 40 40 40 1600
-14	53436 27 2678 2678 10.172951349057 10.172951349057 1 0 0 0 0
-15	53463 10 0 0 0 0 1 0 0 0 0
-17	53473 28 2679 2679 10.172951349057 10.172951349057 1 60 60 60 3600
-18	53501 28 2679 2679 10.172951349057 10.172951349057 1 40 40 40 1600
-21	53529 74 0 2683 0 10.173191349057 4 0 3 7 17
-22	53603 64 0 2683 0 10.173191349057 3 0 1 2 2
-23	53667 108 2679 2683 10.172951349057 10.173191349057 4 0 2 4 6
-30	53775 10 0 0 0 0 1 0 0 0 0
-31	53785 28 2660 2660 10.107451342416 10.107451342416 1 40 40 40 1600
-34	53813 28 2660 2660 10.107451342416 10.107451342416 1 60 60 60 3600
-36	53841 20 0 0 0 0 2 0 2 2 4
-37	53861 64 0 2659 0 10.107451342416 3 1 3 5 11
-50	53925 28 2653 2653 10.107210744638 10.107210744638 1 40 40 40 1600
-52	53953 27 2653 2653 10.107210744638 10.107210744638 1 0 0 0 0
-53	53980 10 0 0 0 0 1 0 0 0 0
-55	53990 28 2654 2654 10.107210744638 10.107210744638 1 60 60 60 3600
-56	54018 28 2654 2654 10.107210744638 10.107210744638 1 40 40 40 1600
-59	54046 74 0 2658 0 10.107450744638 4 0 3 7 17
-60	54120 64 0 2658 0 10.107450744638 3 0 1 2 2
-61	54184 108 2654 2658 10.107210744638 10.107450744638 4 0 2 4 6
+vector 97  GreedyTest.host1.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 89  GreedyTest.host1.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 91  GreedyTest.host1.wlan[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 95  GreedyTest.host1.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 100  GreedyTest.host1.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 94  GreedyTest.host1.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 119  GreedyTest.host5.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 116  GreedyTest.host5.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 81  GreedyTest.host0.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 78  GreedyTest.host0.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 105  GreedyTest.host5.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 106  GreedyTest.host5.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 101  GreedyTest.host5.udpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 102  GreedyTest.host5.udpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 103  GreedyTest.host5.udpApp[0]  rcvdPkSeqNo:vector  ETV
+attr interpolationmode  none
+attr source  appPkSeqNo(rcvdPk)
+attr title  "received packet sequence number, vector"

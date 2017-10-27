@@ -1,0 +1,19 @@
+---- 20171027-17:51:18 ---------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#652: ptr1095a9b8 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .network.c ptr1095a9b8 1"
+
+
+Tcl error: moduleinspector.cc#232: tagOrId "f557" doesn't match any items
+    while executing
+".network.c raise submodext f557"
+
+
