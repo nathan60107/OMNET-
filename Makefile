@@ -15,7 +15,13 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(QTENV_LIBS) $(CMDENV_LI
 #USERIF_LIBS = $(QTENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Igreedy1 -Igreedy1/results -Iresults
+INCLUDE_PATH = \
+    -I. \
+    -Igreedy1 \
+    -Igreedy1/results \
+    -Iresults \
+    -ItestForGreedy \
+    -ItestForGreedy/results
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -123,13 +129,15 @@ clean:
 	$(Q)-rm -f greedy1/*_m.cc greedy1/*_m.h greedy1/*_sm.cc greedy1/*_sm.h
 	$(Q)-rm -f greedy1/results/*_m.cc greedy1/results/*_m.h greedy1/results/*_sm.cc greedy1/results/*_sm.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h results/*_sm.cc results/*_sm.h
+	$(Q)-rm -f testForGreedy/*_m.cc testForGreedy/*_m.h testForGreedy/*_sm.cc testForGreedy/*_sm.h
+	$(Q)-rm -f testForGreedy/results/*_m.cc testForGreedy/results/*_m.h testForGreedy/results/*_sm.cc testForGreedy/results/*_sm.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES) $(SM_CC_FILES)  ./*.cc greedy1/*.cc greedy1/results/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES) $(SM_CC_FILES)  ./*.cc greedy1/*.cc greedy1/results/*.cc results/*.cc testForGreedy/*.cc testForGreedy/results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 
