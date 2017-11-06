@@ -1,0 +1,251 @@
+file 3563474 1509964355                                         
+version 2
+run General-0-20171106-03:52:32-11084
+attr configname General
+attr datetime 20171106-03:52:32
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network recording.greedy1.GreedyTest
+attr processid 11084
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.n_hosts 10
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.address "\"auto\""
+param **.wlan[*].mac.headerLength 20B
+param **.wlan[*].radio.transmitter.detectionRange 0m
+param **.wlan[*].radio.transmitter.headerBitLength 0b
+param **.wlan[*].radio.transmitter.interferenceRange 0m
+param **.wlan[*].radioType "\"IdealRadio\""
+param **.wlan[*].typename "\"IdealWirelessNic\""
+param **.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].radio.displayCommunicationRange true
+param *.host*.wlan[0].typename "\"IdealWirelessNic\""
+param *.host0.numUdpApps 1
+param *.host0.udpApp[0].destAddresses "\"host5\""
+param *.host0.udpApp[0].destPort 5000
+param *.host0.udpApp[0].messageLength 1000B
+param *.host0.udpApp[0].packetName "\"UDPData\""
+param *.host0.udpApp[0].sendInterval exponential(12ms)
+param *.host0.udpApp[0].typename "\"UDPBasicApp\""
+param *.host0.wlan[*].radio.transmitter.communicationRange 200m
+param *.host1.mobility.angle 0deg
+param *.host1.mobility.speed 1mps
+param *.host1.mobilityType "\"LinearMobility\""
+param *.host1.wlan[*].radio.transmitter.communicationRange 200m
+param *.host2.wlan[*].radio.transmitter.communicationRange 200m
+param *.host3.wlan[*].radio.transmitter.communicationRange 200m
+param *.host5.numUdpApps 1
+param *.host5.udpApp[0].localPort 5000
+param *.host5.udpApp[0].typename "\"UDPSink\""
+param *.host5.wlan[*].radio.transmitter.communicationRange 200m
+param *.integratedCanvasVisualizer.dataLinkVisualizer.packetNameFilter "\"UDPData*\""
+param *.integratedCanvasVisualizer.mediumVisualizer.displaySignals true
+param *.integratedCanvasVisualizer.mobilityVisualizer.displayMovementTrail true
+param *.integratedCanvasVisualizer.physicalLinkVisualizer.packetNameFilter "\"UDPData*\""
+
+vector 15  GreedyTest.host0.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 30  GreedyTest.host1.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 53  GreedyTest.host5.wlan[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 21  GreedyTest.host0.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 36  GreedyTest.host1.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 59  GreedyTest.host5.wlan[0].radio  radioMode:vector  ETV
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, vector"
+vector 22  GreedyTest.host0.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 37  GreedyTest.host1.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 60  GreedyTest.host5.wlan[0].radio  receptionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, vector"
+vector 1  GreedyTest.host0.udpApp[0]  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 4  GreedyTest.host0.udp  sentPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, vector(packetBytes)"
+vector 12  GreedyTest.host0.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 14  GreedyTest.host0.wlan[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 18  GreedyTest.host0.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 23  GreedyTest.host0.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 17  GreedyTest.host0.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 34  GreedyTest.host1.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 35  GreedyTest.host1.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 50  GreedyTest.host5.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 52  GreedyTest.host5.wlan[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 56  GreedyTest.host5.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 61  GreedyTest.host5.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 55  GreedyTest.host5.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 31  GreedyTest.host1.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 27  GreedyTest.host1.wlan[0].queue  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr title  "received packets, vector(packetBytes)"
+vector 29  GreedyTest.host1.wlan[0].queue  queueingTime:vector  ETV
+attr interpolationmode  none
+attr title  "queueing time, vector"
+vector 33  GreedyTest.host1.wlan[0].mac  rcvdPkFromHL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, vector(packetBytes)"
+vector 38  GreedyTest.host1.wlan[0].radio  transmissionState:vector  ETV
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, vector"
+vector 32  GreedyTest.host1.wlan[0].mac  sentDownPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, vector(packetBytes)"
+vector 19  GreedyTest.host0.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 16  GreedyTest.host0.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 13  GreedyTest.host0.wlan[0].queue  dropPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, vector(packetBytes)"
+vector 28  GreedyTest.host1.wlan[0].queue  dropPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, vector(packetBytes)"
+vector 57  GreedyTest.host5.wlan[0].mac  rcvdPkFromLL:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, vector(packetBytes)"
+vector 58  GreedyTest.host5.wlan[0].mac  droppedPkNotForUs:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, vector(packetBytes)"
+vector 54  GreedyTest.host5.wlan[0].mac  passedUpPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, vector(packetBytes)"
+vector 43  GreedyTest.host5.udp  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 44  GreedyTest.host5.udp  passedUpPk:vector(count)  ETV
+attr interpolationmode  none
+attr title  "packets passed up, vector(count)"
+vector 39  GreedyTest.host5.udpApp[0]  rcvdPk:vector(packetBytes)  ETV
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, vector(packetBytes)"
+vector 40  GreedyTest.host5.udpApp[0]  endToEndDelay:vector  ETV
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, vector"
+attr unit  s
+vector 41  GreedyTest.host5.udpApp[0]  rcvdPkSeqNo:vector  ETV
+attr interpolationmode  none
+attr source  appPkSeqNo(rcvdPk)
+attr title  "received packet sequence number, vector"
+1	9810 328588 15 108019 0.022315250545 130.091487667647 10932 1000 1000 10932000 10932000000
+4	338398 328588 17 108020 0.022315250545 130.091487667647 10932 1008 1008 11019456 11107611648
+12	666986 100650 2627 107583 10 130 3794 40 1068 4038668 4312724944
+13	767636 31 41041 41041 30.000783776329 30.000783776329 1 1068 1068 1068 1140624
+14	767667 117833 2627 108056 10 130.104448 3718 0 0.435024896695 300.14462019385 84.762954107619
+15	885500 105051 0 108056 0 130.104448 4520 0 100 143230 9336960
+16	990551 32804 3823 66589 10.702249021827 41.766540555383 1140 40 80 91160 7291200
+17	1023355 107115 2727 108058 10 130.104448 3718 60 1088 4031860 4385824720
+18	1130470 107114 2727 108058 10 130.104448 3718 40 1068 3957500 4226037520
+19	1237584 33943 3823 66589 10.702249021827 41.766540555383 1140 60 100 113960 11393600
+21	1271527 192037 0 108058 0 130.104448 7437 0 3 18590 48334
+22	1463564 258659 0 108058 0 130.104448 9835 0 3 8897 16813
+23	1722223 384034 2727 108060 10 130.104448 14870 0 2 14871 22307
+27	2106257 91449 3816 107683 10.701848463365 130 3605 40 1068 1473520 1384083200
+28	2197706 87 74175 79634 60.001772387186 70.002726727165 3 80 80 240 19200
+29	2197793 101815 3816 108057 10.701848463365 130.104448 3527 0 0.433605432096 316.84537115648 91.631335972247
+30	2299608 66140 0 108057 0 130.104448 3124 0 100 168342 11990030
+31	2365748 55607 3747 105251 10.435440557753 121.7945767208 1809 40 1068 1913908 2042934384
+32	2421355 97143 3817 108059 10.701848463365 130.104448 3527 60 1088 1463720 1355655200
+33	2518498 94753 3817 108059 10.701848463365 130.104448 3527 40 1068 1393180 1298517200
+34	2613251 58605 2735 105251 10.004352556595 121.7945767208 1909 60 1088 2058888 2238588704
+35	2671856 2988 2735 3741 10.004352556595 10.435200557741 100 1088 1088 108800 118374400
+36	2674844 178017 0 108059 0 130.104448 7055 0 3 17635 45851
+37	2852861 334163 0 108059 0 130.104448 12685 0 3 16007 34733
+38	3187024 355994 3817 108061 10.701848463365 130.104448 14106 0 2 14107 21161
+39	3543018 98 95750 104778 100.435200534404 120.435200472735 3 1000 1000 3000 3000000
+40	3543116 131 95750 104778 100.435200534404 120.435200472735 3 74.936520663027 91.257524629399 249.19597535875 20832.738325301
+41	3543247 98 95750 104778 100.435200534404 120.435200472735 3 2139 2400 6814 15510946
+43	3543345 98 95749 104777 100.435200534404 120.435200472735 3 1008 1008 3024 3048192
+44	3543443 89 95749 104777 100.435200534404 120.435200472735 3 1 3 6 14
+50	3543532 622 2971 105244 10.107210744638 121.794176252219 21 40 80 1200 76800
+52	3544154 601 2971 105244 10.107210744638 121.794176252219 21 0 0 0 0
+53	3544755 10 0 0 0 0 1 0 0 0 0
+54	3544765 396 76953 104943 60.922116695221 120.812534374776 13 40 1068 3764 3457072
+55	3545161 631 2972 105245 10.107210744638 121.794176252219 21 60 100 1620 133200
+56	3545792 622 2972 105245 10.107210744638 121.794176252219 21 40 80 1200 76800
+57	3546414 3211 76258 104943 60.454640660615 120.812534374776 107 60 1088 13424 4552832
+58	3549625 2811 76258 82379 60.454640660615 70.917196964413 94 100 100 9400 940000
+59	3552436 1222 0 105249 0 121.794576252219 44 0 3 107 277
+60	3553658 7412 0 107688 0 130.000000443745 264 0 3 472 1152
+61	3561070 2404 2972 105249 10.107210744638 121.794576252219 84 0 2 84 126

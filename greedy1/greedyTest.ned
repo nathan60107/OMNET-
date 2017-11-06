@@ -43,10 +43,10 @@ network GreedyTest
         //    @display("p=157,99");
         //}
         host0: GREEDYRouter {//greedyRouterHost[n_hosts]
-            @display("p=132,42");
+            @display("p=96.768005,22.176");
         }
         host1: GREEDYRouter {//greedyRouterHost[n_hosts]
-            @display("p=244,123");
+            @display("p=219.744,122.976006");
         }
         //host2: GREEDYRouter {//greedyRouterHost[n_hosts]
         //    @display("p=466.704,41.328003");
@@ -58,7 +58,7 @@ network GreedyTest
         //    @display("p=440,255");
         //}
         host5: GREEDYRouter {//greedyRouterHost[n_hosts]
-            @display("p=359.85602,180.432");
+            @display("p=469.72803,180.432");
         }
         configurator: IPv4NetworkConfigurator {
             @display("p=55,123");

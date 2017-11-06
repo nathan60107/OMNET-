@@ -1,0 +1,1050 @@
+version 2
+run General-0-20171106-03:52:32-11084
+attr configname General
+attr datetime 20171106-03:52:32
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network recording.greedy1.GreedyTest
+attr processid 11084
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.n_hosts 10
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.address "\"auto\""
+param **.wlan[*].mac.headerLength 20B
+param **.wlan[*].radio.transmitter.detectionRange 0m
+param **.wlan[*].radio.transmitter.headerBitLength 0b
+param **.wlan[*].radio.transmitter.interferenceRange 0m
+param **.wlan[*].radioType "\"IdealRadio\""
+param **.wlan[*].typename "\"IdealWirelessNic\""
+param **.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].radio.displayCommunicationRange true
+param *.host*.wlan[0].typename "\"IdealWirelessNic\""
+param *.host0.numUdpApps 1
+param *.host0.udpApp[0].destAddresses "\"host5\""
+param *.host0.udpApp[0].destPort 5000
+param *.host0.udpApp[0].messageLength 1000B
+param *.host0.udpApp[0].packetName "\"UDPData\""
+param *.host0.udpApp[0].sendInterval exponential(12ms)
+param *.host0.udpApp[0].typename "\"UDPBasicApp\""
+param *.host0.wlan[*].radio.transmitter.communicationRange 200m
+param *.host1.mobility.angle 0deg
+param *.host1.mobility.speed 1mps
+param *.host1.mobilityType "\"LinearMobility\""
+param *.host1.wlan[*].radio.transmitter.communicationRange 200m
+param *.host2.wlan[*].radio.transmitter.communicationRange 200m
+param *.host3.wlan[*].radio.transmitter.communicationRange 200m
+param *.host5.numUdpApps 1
+param *.host5.udpApp[0].localPort 5000
+param *.host5.udpApp[0].typename "\"UDPSink\""
+param *.host5.wlan[*].radio.transmitter.communicationRange 200m
+param *.integratedCanvasVisualizer.dataLinkVisualizer.packetNameFilter "\"UDPData*\""
+param *.integratedCanvasVisualizer.mediumVisualizer.displaySignals true
+param *.integratedCanvasVisualizer.mobilityVisualizer.displayMovementTrail true
+param *.integratedCanvasVisualizer.physicalLinkVisualizer.packetNameFilter "\"UDPData*\""
+
+scalar GreedyTest.host0.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GreedyTest.host0.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GreedyTest.host0.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GreedyTest.host0.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GreedyTest.host0.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GreedyTest.host0.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GreedyTest.host0.wlan[0].queue 	queueLength:max 	100
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GreedyTest.host0.wlan[0].queue 	queueLength:timeavg 	2.3671618528598
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GreedyTest.host0.wlan[0].queue 	queueingTime:histogram
+field count 3718
+field mean 0.080727439535732
+field stddev 0.12761448981818
+field sum 300.14462019385
+field sqrsum 84.762954107619
+field min 0
+field max 0.435024896695
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.215424	0
+bin	-0.1867008	0
+bin	-0.1579776	0
+bin	-0.1292544	0
+bin	-0.1005312	0
+bin	-0.071808	0
+bin	-0.0430848	0
+bin	-0.0143616	2348
+bin	0.0143616	105
+bin	0.0430848	110
+bin	0.071808	102
+bin	0.1005312	84
+bin	0.1292544	103
+bin	0.1579776	80
+bin	0.1867008	100
+bin	0.215424	99
+bin	0.2441472	88
+bin	0.2728704	88
+bin	0.3015936	94
+bin	0.3303168	89
+bin	0.35904	100
+bin	0.3877632	76
+bin	0.4164864	52
+bin	0.4452096	0
+bin	0.4739328	0
+bin	0.502656	0
+bin	0.5313792	0
+bin	0.5601024	0
+bin	0.5888256	0
+bin	0.6175488	0
+bin	0.646272	0
+scalar GreedyTest.host0.wlan[0].queue 	dropPk:count 	1
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GreedyTest.host0.wlan[0].queue 	dropPk:sum(packetBytes) 	1068
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GreedyTest.host0.wlan[0].queue 	rcvdPk:count 	3794
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GreedyTest.host0.wlan[0].queue 	rcvdPk:sum(packetBytes) 	4038668
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GreedyTest.host0.wlan[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GreedyTest.host0.wlan[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GreedyTest.host0.wlan[0].mac 	rcvdPkFromHL:count 	3718
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GreedyTest.host0.wlan[0].mac 	rcvdPkFromHL:sum(packetBytes) 	3957500
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GreedyTest.host0.wlan[0].mac 	passedUpPk:count 	1140
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GreedyTest.host0.wlan[0].mac 	passedUpPk:sum(packetBytes) 	91160
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GreedyTest.host0.wlan[0].mac 	rcvdPkFromLL:count 	1140
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar GreedyTest.host0.wlan[0].mac 	rcvdPkFromLL:sum(packetBytes) 	113960
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar GreedyTest.host0.wlan[0].mac 	sentDownPk:count 	3718
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar GreedyTest.host0.wlan[0].mac 	sentDownPk:sum(packetBytes) 	4031860
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+statistic GreedyTest.host0.wlan[0].radio 	symbolErrorRate:histogram
+field count 1140
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	1140
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic GreedyTest.host0.wlan[0].radio 	bitErrorRate:histogram
+field count 1140
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	1140
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic GreedyTest.host0.wlan[0].radio 	packetErrorRate:histogram
+field count 1140
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	1140
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic GreedyTest.host0.wlan[0].radio 	minSNIR:histogram
+field count 1140
+field mean nan
+field stddev nan
+field sum nan
+field sqrsum nan
+field min nan
+field max nan
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	1140
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+scalar GreedyTest.host0.wlan[0].radio 	transmissionState:count 	14870
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar GreedyTest.host0.wlan[0].radio 	receptionState:count 	9835
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar GreedyTest.host0.wlan[0].radio 	radioMode:count 	7437
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar GreedyTest.host0.udpApp[0] 	"packets sent" 	10932
+scalar GreedyTest.host0.udpApp[0] 	"packets received" 	0
+scalar GreedyTest.host0.udpApp[0] 	sentPk:count 	10932
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar GreedyTest.host0.udpApp[0] 	sentPk:sum(packetBytes) 	10932000
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar GreedyTest.host0.udpApp[0] 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar GreedyTest.host0.udpApp[0] 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar GreedyTest.host0.udpApp[0] 	throughput:last 	nan
+attr source  throughput(rcvdPk)
+attr title  "throughput, last"
+attr unit  bps
+statistic GreedyTest.host0.udpApp[0] 	rcvdPkLifetime:stats
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "received packet lifetime, stats"
+attr unit  s
+scalar GreedyTest.host0.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar GreedyTest.host0.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar GreedyTest.host0.udp 	passedUpPk:count 	0
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar GreedyTest.host0.udp 	sentPk:count 	10932
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar GreedyTest.host0.udp 	sentPk:sum(packetBytes) 	11019456
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar GreedyTest.host0.udp 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar GreedyTest.host0.udp 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar GreedyTest.host1.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GreedyTest.host1.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GreedyTest.host1.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GreedyTest.host1.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GreedyTest.host1.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GreedyTest.host1.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GreedyTest.host1.wlan[0].queue 	queueLength:max 	100
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GreedyTest.host1.wlan[0].queue 	queueLength:timeavg 	2.4955260333526
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GreedyTest.host1.wlan[0].queue 	queueingTime:histogram
+field count 3527
+field mean 0.089834241892963
+field stddev 0.13384637897321
+field sum 316.84537115648
+field sqrsum 91.631335972247
+field min 0
+field max 0.433605432096
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.000126629916	0
+bin	-0.0001097459272	0
+bin	-9.28619384e-005	0
+bin	-7.59779496e-005	0
+bin	-5.90939608e-005	0
+bin	-4.2209972e-005	0
+bin	-2.53259832e-005	0
+bin	-8.4419944e-006	2004
+bin	8.4419944e-006	1
+bin	2.53259832e-005	5
+bin	4.2209972e-005	4
+bin	5.90939608e-005	3
+bin	7.59779496e-005	2
+bin	9.28619384e-005	3
+bin	0.0001097459272	3
+bin	0.000126629916	3
+bin	0.0001435139048	0
+bin	0.0001603978936	3
+bin	0.0001772818824	7
+bin	0.0001941658712	1
+bin	0.00021104986	2
+bin	0.0002279338488	0
+bin	0.0002448178376	6
+bin	0.0002617018264	3
+bin	0.0002785858152	3
+bin	0.000295469804	2
+bin	0.0003123537928	2
+bin	0.0003292377816	5
+bin	0.0003461217704	3
+bin	0.0003630057592	1
+bin	0.000379889748	1461
+scalar GreedyTest.host1.wlan[0].queue 	dropPk:count 	3
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GreedyTest.host1.wlan[0].queue 	dropPk:sum(packetBytes) 	240
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GreedyTest.host1.wlan[0].queue 	rcvdPk:count 	3605
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GreedyTest.host1.wlan[0].queue 	rcvdPk:sum(packetBytes) 	1473520
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GreedyTest.host1.wlan[0].mac 	droppedPkNotForUs:count 	100
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GreedyTest.host1.wlan[0].mac 	droppedPkNotForUs:sum(packetBytes) 	108800
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GreedyTest.host1.wlan[0].mac 	rcvdPkFromHL:count 	3527
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GreedyTest.host1.wlan[0].mac 	rcvdPkFromHL:sum(packetBytes) 	1393180
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GreedyTest.host1.wlan[0].mac 	passedUpPk:count 	1809
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GreedyTest.host1.wlan[0].mac 	passedUpPk:sum(packetBytes) 	1913908
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GreedyTest.host1.wlan[0].mac 	rcvdPkFromLL:count 	1909
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar GreedyTest.host1.wlan[0].mac 	rcvdPkFromLL:sum(packetBytes) 	2058888
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar GreedyTest.host1.wlan[0].mac 	sentDownPk:count 	3527
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar GreedyTest.host1.wlan[0].mac 	sentDownPk:sum(packetBytes) 	1463720
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+statistic GreedyTest.host1.wlan[0].radio 	symbolErrorRate:histogram
+field count 1909
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	1909
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic GreedyTest.host1.wlan[0].radio 	bitErrorRate:histogram
+field count 1909
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	1909
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic GreedyTest.host1.wlan[0].radio 	packetErrorRate:histogram
+field count 1909
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	1909
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic GreedyTest.host1.wlan[0].radio 	minSNIR:histogram
+field count 1909
+field mean nan
+field stddev nan
+field sum nan
+field sqrsum nan
+field min nan
+field max nan
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	1909
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+scalar GreedyTest.host1.wlan[0].radio 	transmissionState:count 	14106
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar GreedyTest.host1.wlan[0].radio 	receptionState:count 	12685
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar GreedyTest.host1.wlan[0].radio 	radioMode:count 	7055
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar GreedyTest.host5.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GreedyTest.host5.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GreedyTest.host5.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GreedyTest.host5.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GreedyTest.host5.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GreedyTest.host5.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GreedyTest.host5.wlan[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GreedyTest.host5.wlan[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GreedyTest.host5.wlan[0].queue 	queueingTime:histogram
+field count 21
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	21
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GreedyTest.host5.wlan[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GreedyTest.host5.wlan[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GreedyTest.host5.wlan[0].queue 	rcvdPk:count 	21
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GreedyTest.host5.wlan[0].queue 	rcvdPk:sum(packetBytes) 	1200
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GreedyTest.host5.wlan[0].mac 	droppedPkNotForUs:count 	94
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GreedyTest.host5.wlan[0].mac 	droppedPkNotForUs:sum(packetBytes) 	9400
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GreedyTest.host5.wlan[0].mac 	rcvdPkFromHL:count 	21
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GreedyTest.host5.wlan[0].mac 	rcvdPkFromHL:sum(packetBytes) 	1200
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GreedyTest.host5.wlan[0].mac 	passedUpPk:count 	13
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GreedyTest.host5.wlan[0].mac 	passedUpPk:sum(packetBytes) 	3764
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GreedyTest.host5.wlan[0].mac 	rcvdPkFromLL:count 	107
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar GreedyTest.host5.wlan[0].mac 	rcvdPkFromLL:sum(packetBytes) 	13424
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar GreedyTest.host5.wlan[0].mac 	sentDownPk:count 	21
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar GreedyTest.host5.wlan[0].mac 	sentDownPk:sum(packetBytes) 	1620
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+statistic GreedyTest.host5.wlan[0].radio 	symbolErrorRate:histogram
+field count 107
+field mean 0.065420560747664
+field stddev 0.24843009105039
+field sum 7
+field sqrsum 7
+field min 0
+field max 1
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-1	0
+bin	0	100
+bin	1	7
+bin	2	0
+statistic GreedyTest.host5.wlan[0].radio 	bitErrorRate:histogram
+field count 107
+field mean 0.065420560747664
+field stddev 0.24843009105039
+field sum 7
+field sqrsum 7
+field min 0
+field max 1
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-1	0
+bin	0	100
+bin	1	7
+bin	2	0
+statistic GreedyTest.host5.wlan[0].radio 	packetErrorRate:histogram
+field count 107
+field mean 0.065420560747664
+field stddev 0.24843009105039
+field sum 7
+field sqrsum 7
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-1	0
+bin	0	100
+bin	1	7
+bin	2	0
+statistic GreedyTest.host5.wlan[0].radio 	minSNIR:histogram
+field count 107
+field mean nan
+field stddev nan
+field sum nan
+field sqrsum nan
+field min nan
+field max nan
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	107
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+bin	nan	0
+scalar GreedyTest.host5.wlan[0].radio 	transmissionState:count 	84
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar GreedyTest.host5.wlan[0].radio 	receptionState:count 	264
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar GreedyTest.host5.wlan[0].radio 	radioMode:count 	44
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+scalar GreedyTest.host5.udpApp[0] 	rcvdPk:count 	3
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar GreedyTest.host5.udpApp[0] 	rcvdPk:sum(packetBytes) 	3000
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar GreedyTest.host5.udpApp[0] 	throughput:last 	800.00000245392
+attr source  throughput(rcvdPk)
+attr title  "throughput, last"
+attr unit  bps
+statistic GreedyTest.host5.udpApp[0] 	endToEndDelay:histogram
+field count 3
+field mean 83.065325119583
+field stddev 8.160686663337
+field sum 249.19597535875
+field sqrsum 20832.738325301
+field min 74.936520663027
+field max 91.257524629399
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	66.776018679841	0
+bin	67.864085610932	0
+bin	68.952152542024	0
+bin	70.040219473115	0
+bin	71.128286404207	0
+bin	72.216353335298	0
+bin	73.30442026639	0
+bin	74.392487197481	1
+bin	75.480554128573	0
+bin	76.568621059664	0
+bin	77.656687990756	0
+bin	78.744754921847	0
+bin	79.832821852939	0
+bin	80.92088878403	0
+bin	82.008955715122	1
+bin	83.097022646213	0
+bin	84.185089577304	0
+bin	85.273156508396	0
+bin	86.361223439487	0
+bin	87.449290370579	0
+bin	88.53735730167	0
+bin	89.625424232762	0
+bin	90.713491163853	1
+bin	91.801558094945	0
+bin	92.889625026036	0
+bin	93.977691957128	0
+bin	95.065758888219	0
+bin	96.153825819311	0
+bin	97.241892750402	0
+bin	98.329959681494	0
+bin	99.418026612585	0
+scalar GreedyTest.host5.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar GreedyTest.host5.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar GreedyTest.host5.udp 	passedUpPk:count 	3
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar GreedyTest.host5.udp 	sentPk:count 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar GreedyTest.host5.udp 	sentPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar GreedyTest.host5.udp 	rcvdPk:count 	3
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar GreedyTest.host5.udp 	rcvdPk:sum(packetBytes) 	3024
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar GreedyTest.radioMedium.propagation 	"Arrival computation count" 	14532
+scalar GreedyTest.radioMedium 	"transmission count" 	7266
+scalar GreedyTest.radioMedium 	"radio frame send count" 	14532
+scalar GreedyTest.radioMedium 	"reception computation count" 	14530
+scalar GreedyTest.radioMedium 	"interference computation count" 	37981
+scalar GreedyTest.radioMedium 	"reception decision computation count" 	3156
+scalar GreedyTest.radioMedium 	"listening decision computation count" 	23563
+scalar GreedyTest.radioMedium 	"reception cache hit" 	79.69677915182
+attr unit  %
+scalar GreedyTest.radioMedium 	"interference cache hit" 	66.666666666667
+attr unit  %
+scalar GreedyTest.radioMedium 	"noise cache hit" 	0
+attr unit  %
+scalar GreedyTest.radioMedium 	"snir cache hit" 	50
+attr unit  %
+scalar GreedyTest.radioMedium 	"reception decision cache hit" 	50
+attr unit  %
+scalar GreedyTest.radioMedium 	"reception result cache hit" 	0
+attr unit  %
